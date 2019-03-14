@@ -1,0 +1,84 @@
+\documentclass[UTF8, a4paper, 12pt]{article}
+
+\usepackage{ctex}
+
+\usepackage{titlesec}
+
+\titleformat{\section}[block]{\LARGE\bfseries}{实验 \arabic{section}}{1em}{}
+\titleformat{\subsection}[block]{\Large\bfseries}{\arabic{section}.\arabic{subsection}}{1em}{}
+\titleformat{\subsubsection}[block]{\large\bfseries}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}{1em}{}
+
+\usepackage{enumerate}
+
+\usepackage{listings}
+
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\lstset{
+	%行号
+	%numbers=left,
+	%背景框
+	framexleftmargin=5mm,
+	frame=none,
+	%背景色
+	%backgroundcolor=\color[rgb]{1,1,0.76},
+	backgroundcolor=\color[RGB]{244, 244, 244},
+	%样式
+	keywordstyle=\bf\color{blue},
+	identifierstyle=\bf\color{brown},
+	numberstyle=\color{violet},
+	commentstyle=\it\color{gray},
+	stringstyle=\rmfamily\slshape\color{green},
+	%显示空格
+	showstringspaces=false
+	%
+	escapechar={`}
+}
+
+\setcounter{tocdepth}{1}
+
+%------------------------------------------------------------------------------
+% 标题
+%------------------------------------------------------------------------------
+
+\author{吴强，彭蔓蔓}
+
+\title{计算机组成与设计实验任务说明}
+
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+%------------------------------------------------------------------------------
+% 目录
+%------------------------------------------------------------------------------
+
+\tableofcontents
+
+\newpage
+
+%------------------------------------------------------------------------------
+% 内容
+%------------------------------------------------------------------------------
+\include{sec_clock}
+
+%\include{sec_bitops}
+
+\include{sec_inst}
+
+\include{sec_loop}
+
+\include{sec_stack}
+
+%\include{sec_div}
+\include{sec_branch}
+
+\include{sec_float}
+
+\include{sec_mem}
+
+\include{sec_cpu}
+
+\end{document}
